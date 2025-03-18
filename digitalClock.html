@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Digital, Analog & Flip Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="controls">
+        <div>
+            <label for="clock-type">Clock Type:</label>
+            <select id="clock-type">
+                <option value="digital">Digital</option>
+                <option value="analog">Analog</option>
+                <option value="flip">Flip Clock</option>
+            </select>
+        </div>
+        <div>
+            <label for="format-toggle">12/24 Hour Format:</label>
+            <select id="format-toggle">
+                <option value="12">12 Hour</option>
+                <option value="24">24 Hour</option>
+            </select>
+        </div>
+        <div>
+            <label for="timezone-selector">Select Timezone:</label>
+            <select id="timezone-selector"></select>
+        </div>
+        <div>
+            <label for="alarm-time">Set Alarm:</label>
+            <input type="time" id="alarm-time">
+            <button id="set-alarm">Set Alarm</button>
+        </div>
+    </div>
+    
+    <div id="clock-container">
+        <div id="clock-digital"></div>
+        <div id="clock-analog">
+            <div class="clock-face">
+                <div class="hand hour-hand"></div>
+                <div class="hand minute-hand"></div>
+                <div class="hand second-hand"></div>
+                <div class="center-dot"></div>
+            </div>
+        </div>
+        <div id="clock-flip">
+            <div class="flip-clock">
+                <div class="flip-group">
+                    <div class="flip-card" id="flip-hours1"></div>
+                    <div class="flip-card" id="flip-hours2"></div>
+                </div>
+                <div class="flip-group">
+                    <div class="flip-card" id="flip-minutes1"></div>
+                    <div class="flip-card" id="flip-minutes2"></div>
+                </div>
+                <div class="flip-group">
+                    <div class="flip-card" id="flip-seconds1"></div>
+                    <div class="flip-card" id="flip-seconds2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="alarm-sound" src=""></audio>
+    
+    <script src="digitalClock.js"></script>
+</body>
+</html>
